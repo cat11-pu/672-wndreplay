@@ -1,0 +1,35 @@
+{
+  "window": {
+    "handle": "0x0012F4A0",
+    "title": "Безымянный — Блокнот",
+    "alpha": 255,
+    "layered": false,
+    "editText": "",
+    "menu": [
+      {"text": "Файл", "items": [{"text": "Создать", "items": []}, {"text": "Открыть", "items": []}, {"text": "Сохранить", "items": []}, {"text": "Выход", "items": []}]},
+      {"text": "Правка", "items": [{"text": "Отменить", "items": []}, {"text": "Вырезать", "items": []}, {"text": "Копировать", "items": []}, {"text": "Вставить", "items": []}]},
+      {"text": "Формат", "items": []},
+      {"text": "Вид", "items": []},
+      {"text": "Справка", "items": []}
+    ]
+  },
+  "ops": [
+    {"kind": "setAlpha", "target": "0x0012F4A0", "value": "70%"},
+    {"kind": "setAlpha", "target": "0x0012F4A0", "value": "70%"},
+    {"kind": "setAlpha", "target": "0x0012F4A0", "value": "250%"},
+    {"kind": "setAlpha", "target": "0x0012F4A0", "value": "abc"},
+    {"kind": "setAlpha", "target": "0x0012F4A0", "value": "62%"},
+    {"kind": "setTitle", "target": "0x0012F4A0", "text": "Замена"},
+    {"kind": "retitleMenuItem", "target": "0x0012F4A0", "path": [0], "text": "Меню"},
+    {"kind": "retitleMenuItem", "target": "0x0012F4A0", "path": [0, 0], "text": "Подменю"},
+    {"kind": "retitleMenuItem", "target": "0x0012F4A0", "path": [0, 0], "text": "Подменю"},
+    {"kind": "replaceEditText", "target": "0x0012F4A0", "from": 0, "to": 0, "text": "TEXT"},
+    {"kind": "replaceEditText", "target": "0x0012F4A0", "from": 0, "to": 4, "text": "TEXT"},
+    {"kind": "replaceEditText", "target": "0x0012F4A0", "from": 0, "to": 4, "text": "Привет"},
+    {"kind": "retitleMenuItem", "target": "0x0012F4A0", "path": [9], "text": "X"},
+    {"kind": "replaceEditText", "target": "0x0012F4A0", "from": 3, "to": 1, "text": "Q"},
+    {"kind": "setAlpha", "target": "0xDEADBEEF", "value": "50%"},
+    {"kind": "setTitle", "target": "0x0012F4A0", "text": "Итог", "expect": {"title": "Безымянный — Блокнот"}},
+    {"kind": "retitleMenuItem", "target": "0x0012F4A0", "path": [0], "text": "Файл", "expect": {"menu.0.text": "Файл"}}
+  ]
+}
